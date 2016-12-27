@@ -1,6 +1,4 @@
 let nerds = require('nerds');
-const readline = require('readline');
-const eventEmitter = require('events');
 const nodemailer = require('nodemailer');
 const moment = require('moment');
 
@@ -22,11 +20,6 @@ let mailOptions2 = {
   from: '"PokeLord 👥" <ajmalsiddiqui414@gmail.com>',
   subject: 'Your Pokemon'
 };
-
-let rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
