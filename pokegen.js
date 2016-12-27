@@ -9,8 +9,6 @@ let poke2 = [];
 
 let c = 0;
 
-//use an array of promises and promise.all
-
 let mailOptions1 = {
     from: '"PokeLord 👥" <ajmalsiddiqui414@gmail.com>',
     subject: 'Your Pokemon'
