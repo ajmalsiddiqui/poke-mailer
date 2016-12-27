@@ -1,6 +1,5 @@
 let mongodb = require('mongodb');
 const moment = require('moment');
-const eventEmitter = require('events');
 
 let MongoClient = mongodb.MongoClient;
 
