@@ -1,7 +1,7 @@
 let nerds = require('nerds');
+const eventEmitter = require('events');
 const nodemailer = require('nodemailer');
 const moment = require('moment');
-const eventEmitter = require('events');
 
 const pokebook = require('./pokebook');
 
@@ -9,6 +9,8 @@ let poke1 = [];
 let poke2 = [];
 
 let c = 0;
+
+//use an array of promises and promise.all
 
 let mailOptions1 = {
     from: '"PokeLord 👥" <ajmalsiddiqui414@gmail.com>',
@@ -64,7 +66,7 @@ myEmitter.on('done', (arr1, arr2) => {
   else{
     pokebook.log({'player1': mailOptions1.to, 'player2': mailOptions2.to, 'winner': 'none', 'loser': 'none', 'time': new Date()});
     mailOptions1.text = "It was a draw!";
-    mailOptions2.text = "It was a draw!";
+    mailOptions1.text = "It was a draw!";
   }
   setTimeout(() => {
     sendmail(1);
