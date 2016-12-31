@@ -66,7 +66,7 @@ myEmitter.on('done', (arr1, arr2) => {
   else{
     pokebook.log({'player1': mailOptions1.to, 'player2': mailOptions2.to, 'winner': 'none', 'loser': 'none', 'time': new Date()});
     mailOptions1.text = "It was a draw!";
-    mailOptions1.text = "It was a draw!";
+    mailOptions2.text = "It was a draw!";
   }
   setTimeout(() => {
     sendmail(1);
