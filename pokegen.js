@@ -1,6 +1,7 @@
 let nerds = require('nerds');
 const nodemailer = require('nodemailer');
 const moment = require('moment');
+const eventEmitter = require('events');
 
 const pokebook = require('./pokebook');
 
