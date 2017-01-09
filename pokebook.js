@@ -1,23 +1,7 @@
 let mongodb = require('mongodb');
 const moment = require('moment');
 
-let MongoClient = mongodb.MongoClient;
 
-class MyEmitter extends eventEmitter {}
-
-const myEmitter = new MyEmitter();
-
-const url = 'mongodb://localhost:27017/PokeBook';
-
-function log(data){
-  MongoClient.connect(url, (err, db) => {
-    if(err){
-      console.log(err);
-    }
-    else{
-      db.collection('PokeBook').insert(data);
-      db.close();
-    }
   });
 }
 
